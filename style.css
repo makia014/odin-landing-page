@@ -171,6 +171,24 @@ h2 {
   border-radius: 0.75rem;
 }
 
+/* QUOTE */
+.quote {
+  padding: 10rem 20%;
+
+  background-color: var(--grey);
+  font-size: 2.6rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+p.author {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: right;
+  margin: 2rem 5rem;
+}
+
 @media only screen and (min-width: 550px) {
   .nav ul {
     flex-direction: row;
@@ -214,5 +232,13 @@ h2 {
 
   .card {
     width: 25rem;
+  }
+
+  .quote {
+    font-size: 3.6rem;
+  }
+
+  p.author {
+    font-size: 2rem;
   }
 }
