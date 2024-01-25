@@ -54,18 +54,19 @@ div.hero,
 }
 
 .nav {
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   justify-content: space-between;
-  padding: 1% 10%;
+  padding: 1rem 3rem;
 }
 
 .nav ul {
   display: flex;
-  align-items: center;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 a.logo {
@@ -75,15 +76,17 @@ a.logo {
   font-size: 2.4rem;
 }
 
-.hero {
-  gap: 7rem;
-  padding: 7% 10%;
+div.hero {
+  flex-direction: column;
+
+  gap: 4rem;
+  padding: 15rem 10% 10rem;
   margin-bottom: 9rem;
 }
 
 h1 {
   color: var(--light);
-  font-size: 4.8rem;
+  font-size: 2.8rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
 }
@@ -100,7 +103,7 @@ h1 {
 }
 
 .btn-hero {
-  padding: 0.75rem 2.5rem;
+  padding: 1rem 2.5rem;
   background-color: var(--accent);
   color: var(--light);
   font-weight: 900;
@@ -112,4 +115,56 @@ h1 {
 .btn-hero:hover {
   background-color: var(--light);
   color: var(--accent);
+}
+
+.hero-img {
+  order: 0;
+  align-self: flex-start;
+}
+
+.hero-msg {
+  order: 1;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 550px) {
+  .nav ul {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .nav {
+    padding: 1rem 10%;
+  }
+  div.hero {
+    flex-direction: row;
+  }
+
+  .hero-img {
+    width: unset;
+
+    flex: 1 9 auto;
+
+    align-self: center;
+  }
+
+  .hero-msg {
+    order: 0;
+
+    flex: 1 11 auto;
+  }
 }
