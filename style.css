@@ -3,6 +3,7 @@
   --light: #f9faf8;
   --grey: #e5e7eb;
   --accent: #3882f6;
+  --links: #d6af79;
 }
 
 html {
@@ -17,6 +18,7 @@ html {
 }
 
 body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.6rem;
   color: var(--dark);
 }
@@ -29,7 +31,7 @@ a:visited {
 
 a:hover,
 a:active {
-  color: var(--accent);
+  color: var(--links);
 }
 
 ul {
@@ -39,7 +41,6 @@ ul {
 .nav,
 div.hero,
 .cards-container,
-.cta,
 footer {
   display: flex;
   align-items: center;
@@ -48,7 +49,8 @@ footer {
 /* HERO */
 
 div.hero,
-.nav {
+.nav,
+footer {
   background-color: var(--dark);
   color: var(--grey);
 }
@@ -88,6 +90,12 @@ h1 {
   font-size: 2.8rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Times New Roman", Times, serif;
 }
 
 .nav ul a,
@@ -134,9 +142,10 @@ h1 {
 
 .cards {
   padding: 15rem 10% 10rem;
+  font-size: 2rem;
 }
 
-h2 {
+.cards h2 {
   font-size: 2.5rem;
   text-align: center;
 
@@ -173,7 +182,7 @@ h2 {
 
 /* QUOTE */
 .quote {
-  padding: 10rem 20%;
+  padding: 15rem 20% 10rem;
 
   background-color: var(--grey);
   font-size: 2.6rem;
@@ -187,6 +196,68 @@ p.author {
   font-style: normal;
   text-align: right;
   margin: 2rem 5rem;
+}
+
+/* CTA */
+div.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15rem 10% 10rem;
+}
+
+.cta-content {
+  width: 100%;
+
+  background-color: var(--accent);
+
+  border-radius: 0.75rem;
+  padding: 5rem;
+}
+
+.cta h3 {
+  color: var(--light);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.cta p {
+  color: var(--grey);
+}
+
+.cta-text {
+  margin-bottom: 3rem;
+}
+
+a.btn-cta {
+  flex-shrink: 0;
+  color: var(--light);
+  border: 2px solid var(--light);
+  border-radius: 0.75rem;
+  padding: 0.5rem 2.5rem;
+
+  font-weight: 900;
+
+  transition: all 400ms;
+}
+
+a.btn-cta:hover {
+  background-color: var(--light);
+  color: var(--accent);
+
+  border: 2px solid var(--accent);
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 3rem;
 }
 
 @media only screen and (min-width: 550px) {
@@ -229,7 +300,9 @@ p.author {
   h1 {
     font-size: 4.8rem;
   }
-
+  .cards h2 {
+    font-size: 3.2rem;
+  }
   .card {
     width: 25rem;
   }
@@ -240,5 +313,20 @@ p.author {
 
   p.author {
     font-size: 2rem;
+  }
+
+  .cta-content {
+    padding: 5rem 10rem;
+    font-size: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 5rem;
+  }
+
+  .cta h3 {
+    font-size: 3rem;
   }
 }
